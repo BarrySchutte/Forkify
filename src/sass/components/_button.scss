@@ -1,0 +1,121 @@
+.btn {
+  padding: 1.3rem 3rem;
+  font-size: 1.4rem;
+
+  &,
+  &-small,
+  &-small:link,
+  &-small:visited {
+    background-image: linear-gradient(
+      to right bottom,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    border-radius: 10rem;
+    border: none;
+    text-transform: uppercase;
+    color: $color-white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+    font-size: 1.3rem;
+    padding: 1rem 1.75rem;
+    text-decoration: none;
+  }
+
+  &:hover,
+  &-small:hover {
+    transform: scale(1.05);
+  }
+
+  &:focus,
+  &-small:focus {
+    outline: none;
+  }
+
+  & > *:first-child,
+  &-small > *:first-child {
+    margin-right: 1rem;
+  }
+
+  & svg {
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: currentColor;
+  }
+
+  &-small svg,
+  &-small:link svg,
+  &-small:visited svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: currentColor;
+  }
+
+  &-inline {
+    color: $color-secondary-light;
+    font-size: 1.2rem;
+    border: none;
+    background-color: $color-grey-light-1;
+    padding: 0.8rem 1.2rem;
+    border-radius: 10rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+  }
+
+  &-inline svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: currentColor;
+    margin: 0 0.2rem;
+  }
+
+  &-inline span {
+    margin: 0 0.4rem;
+  }
+
+  &-inline:hover {
+    color: $color-primary-dark;
+    background-color: $color-grey-light-2;
+  }
+
+  &-inline:focus {
+    outline: none;
+  }
+
+  &-tiny {
+    height: 1.75rem;
+    width: 1.75rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  &-tiny svg {
+    height: 100%;
+    width: 100%;
+    fill: $color-secondary-light;
+    transition: all 0.3s;
+  }
+
+  &-tiny:focus {
+    outline: none;
+  }
+
+  &-tiny:hover svg {
+    fill: $color-primary-dark;
+    transform: translateY(-1px);
+  }
+
+  &-tiny:active svg {
+    fill: $color-primary-dark;
+    transform: translateY(0);
+  }
+
+  &-tiny:not(:last-child) {
+    margin-right: 0.3rem;
+  }
+}

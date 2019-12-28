@@ -1,0 +1,27 @@
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $color-grey-dark-2;
+}
+
+.heading-2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: $color-secondary-light;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  transform: skewY(-3deg);
+}
+
+.copyright {
+  color: $color-grey-dark-1;
+  font-size: 1.2rem;
+  margin-top: auto;
+}
+
+.link:link,
+.link:visited {
+  color: $color-grey-dark-1;
+}
