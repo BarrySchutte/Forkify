@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
-    entry: './src/js/index.js',
+    entry: ['./src/js/index.js'],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'js/bundle.js'
@@ -28,15 +28,10 @@ module.exports = {
     module: {
         rules: [
         {
-            test: [/.js$/],
+            test: /\.js$/,
             exclude: /(node_modules)/,
             use: {
-                loader: 'babel-loader',
-                options: {
-                    presets: [
-                        '@babel/preset-env'
-                    ]
-                }
+                loader: 'babel-loader'
             },
             test: [/.css$]|.scss$/],
             use: [
