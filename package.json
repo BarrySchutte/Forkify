@@ -22,6 +22,7 @@
   "homepage": "https://barryschutte.github.io/Forkify",
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
+    "axios": "^0.19.1",
     "core-js": "^3.6.1",
     "gh-pages": "^2.1.1",
     "regenerator-runtime": "^0.13.3"
