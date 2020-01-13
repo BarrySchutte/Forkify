@@ -12,8 +12,8 @@ export default class Recipe {
       );
       this.title = res.data.recipe.title;
       this.author = res.data.recipe.publisher;
-      this.img = res.data.recipe.image_url;
-      this.url = res.data.recipe.source_url;
+      this.img = res.data.recipe.image_url.replace('http', 'https');
+      this.url = res.data.recipe.source_url.replace('http', 'https');
       this.ingredients = res.data.recipe.ingredients;
     } catch (error) {
       console.log(error);
@@ -53,6 +53,7 @@ export default class Recipe {
       'cup',
       'pound'
     ];
+    const units = [...unitsShort, 'kg', 'g'];
 
     const newIngredients = this.ingredients.map(el => {
       // Uniform units
@@ -66,7 +67,7 @@ export default class Recipe {
 
       // Parse ingredients into count, unit and ingredient
       const arrIng = ingredient.split(' ');
-      const unitIndex = arrIng.findIndex(el2 => unitsShort.includes(el2));
+      const unitIndex = arrIng.findIndex(el2 => units.includes(el2));
 
       let objIng;
 
