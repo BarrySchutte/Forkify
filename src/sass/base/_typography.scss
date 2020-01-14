@@ -1,5 +1,5 @@
 body {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 400;
   line-height: 1.6;
   color: $color-grey-dark-2;
@@ -24,4 +24,10 @@ body {
 .link:link,
 .link:visited {
   color: $color-grey-dark-1;
+}
+
+@media only screen and (max-width: 800px) {
+  .copyright {
+    margin: 0 auto;
+  }
 }

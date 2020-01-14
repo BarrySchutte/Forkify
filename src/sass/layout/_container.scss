@@ -8,13 +8,21 @@
   display: grid;
   grid-template-rows: 10rem minmax(100rem, auto);
   grid-template-columns: 1.1fr 2fr 1.1fr;
-  grid-template-areas: "head head head" "list recipe shopping";
+  grid-template-areas: 'head head head' 'results recipe shopping';
 }
 
-@media only screen and (max-width: 68.75em) {
+@media only screen and (max-width: 1025px) {
   .container {
+    max-width: 100%;
     width: 100%;
     margin: 0;
     border-radius: 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    grid-template-rows: 10rem minmax(0, auto) minmax(100rem, auto) auto;
+    grid-template-areas: 'head head head' 'results results results' 'recipe recipe recipe' 'shopping shopping shopping';
   }
 }

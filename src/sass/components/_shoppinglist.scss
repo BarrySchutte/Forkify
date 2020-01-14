@@ -1,12 +1,13 @@
 .shopping {
-  padding: 3rem 4rem;
+  grid-area: shopping;
+  padding: 3rem 1rem 3rem 3rem;
   display: flex;
   flex-direction: column;
 
   &__list {
     list-style: none;
     max-height: 77rem;
-    overflow: scroll;
+    overflow: auto;
   }
 
   &__item {
@@ -33,7 +34,7 @@
       font-size: 1.2rem;
       text-align: center;
       border: none;
-      width: 3.7rem;
+      width: 5rem;
       border-radius: 3px;
     }
 
@@ -58,12 +59,7 @@
     margin-top: 0.5rem;
     position: absolute;
     right: 0;
-    background-image: linear-gradient(
-      to right,
-      transparent 0%,
-      $color-white 40%,
-      $color-white 100%
-    );
+    background-image: linear-gradient(to right, transparent 0%, $color-white 40%, $color-white 100%);
     width: 3.75rem;
     padding-left: 2rem;
     visibility: hidden;
@@ -74,5 +70,18 @@
   &__item:hover .shopping__delete {
     opacity: 1;
     visibility: visible;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .shopping {
+    &__list {
+      margin-bottom: 2rem;
+    }
+
+    &__item {
+      height: 7rem;
+      align-items: center;
+    }
   }
 }
