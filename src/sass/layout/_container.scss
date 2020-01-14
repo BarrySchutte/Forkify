@@ -26,3 +26,9 @@
     grid-template-areas: 'head head head' 'results results results' 'recipe recipe recipe' 'shopping shopping shopping';
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    grid-template-rows: 20rem minmax(0, auto) minmax(100rem, auto) auto;
+  }
+}

@@ -116,7 +116,7 @@
 }
 
 .likes__fig::before {
-  content: "";
+  content: '';
   display: block;
   height: 100%;
   width: 100%;
@@ -156,7 +156,7 @@
 }
 
 .likes__pages::after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -168,4 +168,43 @@
 
 .likes__btn--next {
   float: right;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+
+    &__logo {
+      margin-top: 2rem;
+    }
+  }
+
+  .likes {
+    align-self: center;
+    margin-bottom: 1.5rem;
+
+    &__panel {
+      right: -100%;
+      top: 140%;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .header {
+    &__logo {
+      margin-left: 0;
+    }
+  }
+  .search {
+    width: 90%;
+    &__field {
+      height: 4.2rem;
+      width: 100%;
+    }
+
+    &__btn {
+      width: 10rem;
+    }
+  }
 }
