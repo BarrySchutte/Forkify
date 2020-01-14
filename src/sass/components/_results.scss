@@ -93,6 +93,7 @@
 
 @media only screen and (max-width: 800px) {
   .results {
+    display: none;
     &__list {
       display: grid;
       grid-template-columns: 1fr 1fr;

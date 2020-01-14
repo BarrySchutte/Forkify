@@ -29,8 +29,8 @@ const controlSearch = async () => {
   if (query) {
     // 2. New search object and add to state
     state.search = new Search(query);
-
     // 3. Prepare UI for results
+    elements.searchRes.style.display = 'block';
     searchView.clearInput();
     searchView.clearResults();
     renderLoader(elements.searchRes);
