@@ -1,87 +1,87 @@
 .shopping {
-  grid-area: shopping;
-  padding: 3rem 1rem 3rem 3rem;
-  display: flex;
-  flex-direction: column;
-
-  &__list {
-    list-style: none;
-    max-height: 77rem;
-    overflow: auto;
-  }
-
-  &__item {
+    grid-area: shopping;
+    padding: 3rem 1rem 3rem 3rem;
     display: flex;
-    align-items: flex-start;
-    padding: 1.3rem 0;
-    border-bottom: 1px solid $color-grey-light-2;
-    position: relative;
-  }
+    flex-direction: column;
 
-  &__count {
-    flex: 0 0 7.5rem;
-    padding: 0.4rem 0.5rem;
-    border: 1px solid $color-grey-light-2;
-    border-radius: 3px;
-    margin-right: 2rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-
-    & input {
-      color: inherit;
-      font-family: inherit;
-      font-size: 1.2rem;
-      text-align: center;
-      border: none;
-      width: 5rem;
-      border-radius: 3px;
-    }
-
-    & input:focus {
-      outline: none;
-      background-color: $color-grey-light-2;
-    }
-
-    & p {
-      font-size: 1.2rem;
-    }
-  }
-
-  &__description {
-    flex: 1;
-    font-size: 1.3rem;
-    margin-top: 0.4rem;
-    margin-right: 1.5rem;
-  }
-
-  &__delete {
-    margin-top: 0.5rem;
-    position: absolute;
-    right: 0;
-    background-image: linear-gradient(to right, transparent 0%, $color-white 40%, $color-white 100%);
-    width: 3.75rem;
-    padding-left: 2rem;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.5s;
-  }
-
-  &__item:hover .shopping__delete {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .shopping {
     &__list {
-      margin-bottom: 2rem;
+        list-style: none;
+        max-height: 77rem;
+        overflow: auto;
     }
 
     &__item {
-      height: 7rem;
-      align-items: center;
+        display: flex;
+        align-items: flex-start;
+        padding: 1.3rem 0;
+        border-bottom: 1px solid $color-grey-light-2;
+        position: relative;
     }
-  }
+
+    &__count {
+        flex: 0 0 7.5rem;
+        padding: 0.4rem 0.5rem;
+        border: 1px solid $color-grey-light-2;
+        border-radius: 3px;
+        margin-right: 2rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+
+        & input {
+            color: inherit;
+            font-family: inherit;
+            font-size: 1.2rem;
+            text-align: center;
+            border: none;
+            width: 5rem;
+            border-radius: 3px;
+        }
+
+        & input:focus {
+            outline: none;
+            background-color: $color-grey-light-2;
+        }
+
+        & p {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__description {
+        flex: 1;
+        font-size: 1.3rem;
+        margin-top: 0.4rem;
+        margin-right: 1.5rem;
+    }
+
+    &__delete {
+        margin-top: 0.5rem;
+        position: absolute;
+        right: 0;
+        background-image: linear-gradient(to right, transparent 0%, $color-white 40%, $color-white 100%);
+        width: 3.75rem;
+        padding-left: 2rem;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s;
+    }
+
+    &__item:hover .shopping__delete {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .shopping {
+        &__list {
+            margin-bottom: 2rem;
+        }
+
+        &__item {
+            height: 7rem;
+            align-items: center;
+        }
+    }
 }
